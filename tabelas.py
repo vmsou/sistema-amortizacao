@@ -21,6 +21,7 @@ class Tabela:
     _valores = defaultdict(dict)
 
     def __post_init__(self):
+        self.filename = "amort"
         self._initialize_table()
         self._adjust_carencia()
         self._initialize_type()
@@ -242,5 +243,5 @@ class Tabela:
                     print(value, end=' ')
             print('')
 
-    def create_sheet(self, tabela, row_start=2, column_start=2, filename='Sheet'):
-        tabela_excel.run(tabela, row_start, column_start, filename)
+    def create_sheet(self, tabela, row_start=2, column_start=2):
+        tabela_excel.run(tabela, row_start, column_start, self.filename)

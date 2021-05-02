@@ -16,7 +16,8 @@ def main():
 
     tabela = tabelas.Tabela(**dados)
     # tabela.print_table()
-    tabela.create_sheet(tabela, filename='test')
+    tabela.filename = "final"
+    tabela.create_sheet(tabela)
 
 
 if __name__ == '__main__':
