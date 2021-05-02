@@ -16,7 +16,6 @@ class Tabela:
     antecipada: int  # 1 - antecipada, 0 - postecipada
     taxa: float  # Ex: 0.12 -> 12%
     limitado: int  # Ex: 5 anos
-    filename: str
 
     _valores = defaultdict(dict)
 
